@@ -8,6 +8,7 @@ public class TelematicsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TelematicsApplication.class, args);
+		System.out.println("test commit");
 	}
 
 }
