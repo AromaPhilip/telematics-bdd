@@ -1,0 +1,150 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "start_timestamp": "2024-09-26T07:41:33.570Z",
+        "line": 9,
+        "name": "Sending vehicle telematics data every 5 seconds",
+        "description": "",
+        "id": "send-vehicle-telematics-data-at-intervals;sending-vehicle-telematics-data-every-<periodseconds>-seconds;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4000400,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "a vehicle with id \"1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1234\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.vehicle.telematics.steps.VehicleTelematicsSteps.aVehicleWithId(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12302692600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "device send telematics data every 5 seconds for 1 minutes",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 34
+                },
+                {
+                  "val": "1",
+                  "offset": 48
+                }
+              ],
+              "location": "com.vehicle.telematics.steps.VehicleTelematicsSteps.deviceSendTelematicsDataEveryNSecondsForMMinutes(int,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22994800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "aggregator EP should return the aggregated 0.5 km distance",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0.5",
+                  "offset": 43
+                }
+              ],
+              "location": "com.vehicle.telematics.steps.VehicleTelematicsSteps.aggregatorEPShouldReturnTheAggregatedDistance(double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-09-26T07:41:45.983Z",
+        "line": 10,
+        "name": "Sending vehicle telematics data every 4 seconds",
+        "description": "",
+        "id": "send-vehicle-telematics-data-at-intervals;sending-vehicle-telematics-data-every-<periodseconds>-seconds;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 999700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "a vehicle with id \"4567\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"4567\"",
+                  "offset": 18
+                }
+              ],
+              "location": "com.vehicle.telematics.steps.VehicleTelematicsSteps.aVehicleWithId(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 15008223500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "device send telematics data every 4 seconds for 1 minutes",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 34
+                },
+                {
+                  "val": "1",
+                  "offset": 48
+                }
+              ],
+              "location": "com.vehicle.telematics.steps.VehicleTelematicsSteps.deviceSendTelematicsDataEveryNSecondsForMMinutes(int,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2009400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "aggregator EP should return the aggregated 0.4 km distance",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0.4",
+                  "offset": 43
+                }
+              ],
+              "location": "com.vehicle.telematics.steps.VehicleTelematicsSteps.aggregatorEPShouldReturnTheAggregatedDistance(double)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "id": "send-vehicle-telematics-data-at-intervals",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Send vehicle telematics data at intervals",
+    "tags": [],
+    "uri": "file:src/test/resources/features/vehicle_telematics.feature"
+  }]

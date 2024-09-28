@@ -1,0 +1,49 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.4'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.vehicle'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Cucumber
+	testImplementation 'io.cucumber:cucumber-java:7.11.1'
+	testImplementation 'io.cucumber:cucumber-junit:7.11.1'
+	testImplementation 'junit:junit:4.13.2'
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+task runTests {
+	dependsOn 'test'
+}
+
+test {
+	useJUnit()
+	finalizedBy runTests
+}
+
+// Automatically run tests on project start
+build.dependsOn test
